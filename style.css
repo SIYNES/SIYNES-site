@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Verdana';
+    background-color: #121212;
+    color: white;
+    overflow: hidden;
+}
+
+.wait {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.4s ease;
+    z-index: 1000;
+}
+
+.enter {
+    padding: 12px 24px;
+    font-size: 2.0rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.enter:hover {
+    background-color: black;
+    transform: scale(1.05);
+}
+
+.enter-button:active {
+    transform: scale(0.98);
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.profile {
+    max-width: 600px;
+    padding: 2rem;
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.name {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #f0f0f0;
+}
+
+.ava {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 3px solid black;
+    transition: transform 0.3s ease;
+}
+
+.ava:hover {
+    transform: scale(1.05);
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}

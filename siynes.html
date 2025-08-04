@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ФЗП | SIYNES</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn.discordapp.com/avatars/810768476175204393/9dbbb99040c794ae49fc116e2d236bad.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/avatars/810768476175204393/9dbbb99040c794ae49fc116e2d236bad.webp" type="image/x-icon">
+</head>
+<body>
+    <div class="wait" id="wait">
+        <button class="enter" onclick="openSite()">click to enter...</button>
+    </div>
+    
+    <main class="main">
+        <video class="video-bg" id="video-bg" loop muted preload="auto"></video>
+        <div class="profile">
+            <h1 class="name">ФЗП | SIYNES</h1>
+            <img src="https://cdn.discordapp.com/avatars/810768476175204393/9dbbb99040c794ae49fc116e2d236bad.webp" 
+                 class="ava">
+            <ul class="links">
+                <li>
+                    <a href="http://discordapp.com/users/810768476175204393" target="_blank">
+                        <img src="https://img.itch.zone/aW1nLzI2MjMzMTYucG5n/original/kh6Kse.png" 
+                             width="32" 
+                             class="social-icon">
+                    </a>
+                    <a href="https://github.com/SIYNES" target="_blank">
+                        <img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/64/social_media_logo_github-1024.png" 
+                             width="32" 
+                             class="social-icon">
+                    </a>
+                    <a href="https://t.me/SIYNES" target="_blank">
+                        <img src="https://static.vecteezy.com/system/resources/previews/020/964/381/non_2x/telegram-circle-icon-for-web-design-free-png.png" 
+                             width="32" 
+                             class="social-icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <script>
+        const video = document.getElementById('video-bg');
+        video.src = "/assets/video.mp4";
+        function openSite() {
+            const preloader = document.getElementById("wait");
+            preloader.style.opacity = '0';
+            
+            setTimeout(() => {
+                video.muted = false;
+                video.volume = 0.3;
+                video.play().catch(() => {});
+                video.classList.add('fade-in');
+                preloader.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 500);
+        }
+    </script>
+</body>
+</html>
